@@ -499,8 +499,9 @@ fill: #F4F4FD;
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 500ms linear, visibility 500ms linear;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .backdrop.is-open {
     opacity: 1;
     visibility: visible;
@@ -515,22 +516,49 @@ fill: #F4F4FD;
     transform:  translate(-50%, -50%);
     width: 408px;
     min-height: 584px;
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
     border-radius: 4px;
     background-color: #FCFCFC;
-
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 } 
 
+.modal-btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.modal-contact-form {
 }
+.modal-btn-close:hover, 
+.modal-btn-close:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+
+}
+.modal-btn-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contact-form-text {
     color: #2E2F42;
     text-align: center;
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-top: 48px;
     margin-bottom: 16px;
 }
 

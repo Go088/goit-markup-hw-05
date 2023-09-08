@@ -416,8 +416,8 @@ fill: #F4F4FD;
     fill: #F4F4FD;
 }
 .footer-form {
-    display: inline-flex;
-    height: 80px;
+    display: flex;
+    gap: 24px;
     margin-left: auto;
 }
 .footer-form-email-wrap {
@@ -439,42 +439,54 @@ fill: #F4F4FD;
     padding-left: 16px;
 }
 
-.footer-form-email {
+.footer-form-input {
     width: 264px;
     height: 40px;
-    flex-shrink: 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
     border-radius: 4px;
-    border: 1px solid #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.footer-form-input::placeholder {
+    color: #ffffff;
 }
  
 
 .footer-subscribe-text {
-    color: #FFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 .footer-form-btn {
-    color: #FFFFFF;
+    display: flex;
+    min-width: 165px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    padding: 8px 64px 8px 24px;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
-    background: #4D5AE5;
-    margin-top: auto;
-    margin-left: 24px;
-    position: relative;
+
 }
 .footer-form-button-icon {
+    margin-left: 16px;
     fill: #FFFFFF;
-    position: absolute;
-    right: 24px;
-    bottom: 8px;
 }
 /* Backdrop */
 .backdrop {
@@ -492,10 +504,10 @@ fill: #F4F4FD;
 
     transition: opacity 500ms linear, visibility 500ms linear;
 }
-.backdrop.is-open {
+/* .backdrop.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
+    pointer-events: auto; */
 }
 
 /* Modal */

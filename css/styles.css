@@ -415,15 +415,12 @@ fill: #F4F4FD;
 .footer-icon {
     fill: #F4F4FD;
 }
+.footer-form-wrap {
+    margin-left: auto;
+}
 .footer-form {
     display: flex;
     gap: 24px;
-    margin-left: auto;
-}
-.footer-form-email-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 }
 
 .footer-form-email-wrap input::placeholder {
@@ -504,10 +501,10 @@ fill: #F4F4FD;
 
     transition: opacity 500ms linear, visibility 500ms linear;
 }
-/* .backdrop.is-open {
+.backdrop.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto; */
+    pointer-events: auto;
 }
 
 /* Modal */
